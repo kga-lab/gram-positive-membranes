@@ -1,0 +1,20 @@
+#include "moltoppar/martini_v3.0.0.itp"
+#include "moltoppar/martini_v3.0.0_solvents_v1.itp"
+#include "moltoppar/CGAMPG.itp"
+#include "moltoppar/CGALPG.itp"
+#include "moltoppar/CGACDL.itp"
+#include "moltoppar/POT.itp"
+#include "moltoppar/chloride.itp"
+
+[ system ]
+; name
+cytoplasmic
+
+[ molecules ]
+; name        number
+AMPG        292
+ALPG        194
+ACDL         26
+W           11575
+K               344
+CL               194
