@@ -1,0 +1,33 @@
+#include "./toppar/charmm36-jul2022.ff/forcefield.itp"
+#include "./toppar/CDLA.itp"
+#include "./toppar/CDLD.itp"
+#include "./toppar/CDLE.itp"
+#include "./toppar/PGLA.itp"
+#include "./toppar/PILA.itp"
+#include "./toppar/charmm36-jul2022.ff/tip3p.itp"
+#include "./toppar/thymol.itp"
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct		 fcx		fcy		   fcz
+   1	1		1000	   1000		  1000
+#endif
+
+; Include topology for ions
+#include "./toppar/charmm36-jul2022.ff/ions.itp"
+
+[ system ]
+; Name
+CDLA in water
+
+[ molecules ]
+; Compound		  #mols
+CDLA               108
+CDLD               60
+CDLE               48
+PGLA               24
+PILA               16
+LIG               100
+SOL         49609
+K                1582
+CL               1110
