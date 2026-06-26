@@ -1,0 +1,43 @@
+integrator               = md
+tinit                    = 0.0
+dt                       = 0.020
+nsteps                   = 500000
+nstlog                   = 1000
+nstcalcenergy           = 100
+nstenergy                = 1000
+nstxout-compressed       = 1000
+compressed-x-precision   = 1000
+
+cutoff-scheme            = Verlet
+nstlist                  = 10     
+ns_type                  = grid
+pbc                      = xyz
+verlet-buffer-tolerance  = 0.005
+
+epsilon_r                = 15
+coulombtype              = reaction-field
+rcoulomb                 = 1.1
+vdw_type                 = cutoff
+vdw-modifier             = Potential-shift-verlet
+rvdw                     = 1.1
+
+constraint_algorithm    = LINCS
+lincs-order             = 4
+
+tcoupl                   = v-rescale
+tc-grps                  = MEMB sol_ions
+tau_t                    = 1.0  1.0
+ref_t                    = 310.15 310.15
+
+; Pressure coupling:
+Pcoupl                   = Parrinello-rahman
+Pcoupltype               = semiisotropic
+tau_p                    = 12
+compressibility          = 3e-4 3e-4
+ref_p                    = 1.0  1.0
+
+; GENERATE VELOCITIES FOR STARTUP RUN:
+gen_vel                  = no
+continuation             = yes
+refcoord_scaling         = all
+
