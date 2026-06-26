@@ -1,0 +1,18 @@
+#include "./moltoppar/martini_v3.0.0.itp"
+#include "./moltoppar/martini_v3.0.0_solvents_v1.itp"
+#include "./moltoppar/DAGX.itp"
+#include "./moltoppar/PGLD.itp"
+#include "./moltoppar/CDLX.itp"
+#include "./moltoppar/POT.itp"
+
+[ system ]
+; name
+sepi memb in water
+
+[ molecules ]
+; name        number
+DAGX       3712
+PGLD       2688
+CDLX       1792
+W           267850
+K                6272
