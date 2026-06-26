@@ -1,0 +1,22 @@
+#include "moltoppar/martini_v3.0.0.itp"
+#include "moltoppar/martini_v3.0.0_solvents_v1.itp"
+#include "moltoppar/CDLA.itp"
+#include "moltoppar/CDLD.itp"
+#include "moltoppar/CDLE.itp"
+#include "moltoppar/PGLA.itp"
+#include "moltoppar/PILA.itp"
+#include "moltoppar/POT.itp"
+
+[ system ]
+; name
+nesteren in water
+
+[ molecules ]
+; name        number
+CDLA       1728
+CDLD        960
+CDLE        768
+PGLA        384
+PILA        256
+W           235942
+K                7552
