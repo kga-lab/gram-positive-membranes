@@ -1,0 +1,12 @@
+#include "moltoppar/martini_v3.0.0.itp"
+#include "moltoppar/martini_v3.0.0_solvents_v1.itp"
+#include "moltoppar/DAGX.itp"
+
+[ system ]
+; name
+DAGX in water
+
+[ molecules ]
+; name        number
+DAGX        1
+W                8714
