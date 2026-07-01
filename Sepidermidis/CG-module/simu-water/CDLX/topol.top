@@ -1,0 +1,14 @@
+#include "moltoppar/martini_v3.0.0.itp"
+#include "moltoppar/martini_v3.0.0_solvents_v1.itp"
+#include "moltoppar/CDLX.itp"
+#include "moltoppar/POT.itp"
+
+[ system ]
+; name
+CDLX in water
+
+[ molecules ]
+; name        number
+CDLX        1
+W           8714
+K                2
