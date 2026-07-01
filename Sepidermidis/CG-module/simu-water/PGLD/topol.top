@@ -1,0 +1,14 @@
+#include "moltoppar/martini_v3.0.0.itp"
+#include "moltoppar/martini_v3.0.0_solvents_v1.itp"
+#include "moltoppar/PGLD.itp"
+#include "moltoppar/POT.itp"
+
+[ system ]
+; name
+PGLD in water
+
+[ molecules ]
+; name        number
+PGLD                1
+W           8714
+K                1
