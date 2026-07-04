@@ -1,0 +1,18 @@
+#!/bin/bash
+
+EXE=gmx
+molecule='ALPG'
+############
+
+$EXE editconf -f ${molecule}.gro -box 8.1 8.1 8.1 -center 4.05 4.05 4.05 -o ${molecule}.gro
+$EXE grompp -f step_mini.mdp -c ${molecule}.gro -p topol.top -o system_mini.tpr -maxwarn 2
+
+$EXE mdrun -v -deffnm system_mini
+
+$EXE solvate -cp system_mini.gro -cs spc216.gro -p topol.top -o system_sol.gro -maxsol 16905
+
+$EXE  grompp -f step_mini.mdp -c system_sol.gro -p topol.top -o system_mini.tpr -r system_sol.gro -maxwarn 1
+
+$EXE genion -s system_mini.tpr -p topol.top -pname K -pq 1 -np 1 -nname CL -nq -1 -nn 2 -o system.gro
+
+$EXE make_ndx -f system.gro -o index.ndx  
