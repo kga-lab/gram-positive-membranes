@@ -1,0 +1,10 @@
+;;;;;; Sodium ion
+
+[moleculetype]
+; molname       nrexcl
+   NA           1
+
+[atoms]
+;id     type    resnr   residu  atom    cgnr    charge  mass
+ 1      TQ5     1       NA      NA      1       1.0    22.98977
+
