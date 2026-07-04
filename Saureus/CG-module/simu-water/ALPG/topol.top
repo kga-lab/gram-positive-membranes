@@ -1,0 +1,16 @@
+#include "moltoppar/martini_v3.0.0.itp"
+#include "moltoppar/martini_v3.0.0_solvents_v1.itp"
+#include "moltoppar/CGALPG.itp"
+#include "moltoppar/POT.itp"
+#include "moltoppar/chloride.itp"
+
+[ system ]
+; name
+ALPG-water
+
+[ molecules ]
+; name        number
+ALPG        1
+W           8714
+K           1
+CL            2

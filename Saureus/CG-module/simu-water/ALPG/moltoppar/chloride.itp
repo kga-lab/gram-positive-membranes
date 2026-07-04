@@ -1,0 +1,11 @@
+;;;;;; Chloride ion
+
+[moleculetype]
+; molname       nrexcl
+   CL           1
+
+[atoms]
+;id     type    resnr   residu  atom    cgnr    charge  mass
+ 1      TQ5     1       CL      CL      1       -1.0     35.453
+
+

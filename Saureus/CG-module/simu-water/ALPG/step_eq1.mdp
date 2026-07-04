@@ -1,0 +1,39 @@
+integrator               = md
+tinit                    = 0.0
+dt                       = 0.005
+nsteps                   = 1000000
+
+nstlog                   = 5000
+nstenergy                = 5000
+nstcalcenergy             = 100
+nstxout-compressed       = 5000
+compressed-x-precision   = 1000
+
+cutoff-scheme            = Verlet
+nstlist                  = 10
+ns_type                  = grid
+pbc                      = xyz
+verlet-buffer-tolerance  = 0.005
+
+epsilon_r                = 15
+coulombtype              = reaction-field
+rcoulomb                 = 1.1
+vdw_type                 = cutoff
+vdw-modifier             = Potential-shift-verlet
+rvdw                     = 1.1
+
+constraint_algorithm    = LINCS
+lincs-order             = 4
+
+tcoupl                   = v-rescale
+tc-grps                  = ALPG  sol_ions
+tau_t                    = 1.0  1.0
+ref_t                    = 310 310
+
+
+; GENERATE VELOCITIES FOR STARTUP RUN:
+gen_vel                  = yes
+gen_temp                 = 310
+gen_seed                 = 1234512345
+refcoord_scaling         = all
+
