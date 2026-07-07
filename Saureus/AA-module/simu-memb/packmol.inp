@@ -1,0 +1,78 @@
+tolerance 2.0
+filetype pdb
+output bilayer.pdb
+
+nloop0 1000
+
+structure ampg_eq.pdb  
+  nloop 2000
+  number 146
+  inside box -75.0 -75.0 -30.0 75.0 75.0 0.0
+  atoms 2 14
+    below plane 0. 0. 1. -16.0
+  end atoms
+  atoms 65 114
+    over plane 0. 0. 1. -4.0
+  end atoms
+end structure
+
+structure ampg_eq.pdb
+  nloop 2000
+  number 146
+  inside box -75.0 -75.0 0.0 75.0 75.0 30.0
+  atoms 2 14
+    over plane 0. 0. 1. 16.0
+  end atoms
+  atoms 65 114
+    below plane 0. 0. 1. 4.0
+  end atoms
+end structure
+
+structure alpg_eq.pdb
+  nloop 2000
+  number 97
+  inside box -75.0 -75.0 -30.0 75.0 75.0 0.0
+  atoms 25 37
+    below plane 0. 0. 1. -16.0
+  end atoms
+  atoms 88 137
+    over plane 0. 0. 1. -4.0
+  end atoms
+  constrain_rotation z 180. 20.
+end structure
+
+structure alpg_eq.pdb
+  nloop 2000
+  number 97
+  inside box -75.0 -75.0 0.0 75.0 75.0 30.0
+  atoms 25 37
+    over plane 0. 0. 1. 16.0
+  end atoms
+  atoms 88 137
+    below plane 0. 0. 1. 4.0
+  end atoms
+end structure
+
+structure acdl_eq.pdb
+  nloop0 2000
+  number 13
+  inside box -75.0 -75.0 -30.0 75.0 75.0 0.0
+  atoms 12 117
+    below plane 0. 0. 1. -16.0
+  end atoms
+  atoms 112 217
+    over plane 0. 0. 1. -4.0
+  end atoms
+end structure
+
+structure acdl_eq.pdb
+  nloop0 2000
+  number 13
+  inside box -75.0 -75.0 0.0 75.0 75.0 30.0
+  atoms 12 117
+    over plane 0. 0. 1. 16.0
+  end atoms
+  atoms 112 217
+    below plane 0. 0. 1. 4.0
+  end atoms
+end structure
