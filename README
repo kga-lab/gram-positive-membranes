@@ -1,1 +1,32 @@
-This folder "gram-positive-membranes" is the model development and simulation of three gram-positive bacterial strains, namely Staphylococcus aureus (Saureus), Staphylococcus epidermidis (Sepidermidis) and Nesterenkonia lakusekhoensis.  
+This folder "gram-positive-membranes" is the model development and simulation of three gram-positive bacterial strains, 
+namely Staphylococcus aureus (Saureus), Staphylococcus epidermidis (Sepidermidis) and Nesterenkonia lakusekhoensis. 
+For each strains, we carried out atomistic and coarse-grained simulations of lipids in water as well as membranes.
+AA-module : Atomistic simulations
+   |
+  (A) simu-water : Bulk simulations of individual lipids in water e.g. folder AMPG refers to simulation of a single
+                   AMPG lipid in water bath. This also contains mapping files for coarse-graining.   
+
+  (B) simu-memb  : Membrane simulation. The folder contains membrane structure, force field, MDP and other necessary files.
+                   my_memgen.py (packmol.inp for Saureus) can be used to construct a bilayer from component lipids. 
+                   mainpgm.f is the Fortran code to compute fractional interaction parameter $\chi_{AB}$ described in the manuscript.
+
+  (C) smiles-mol2 : SMILES structure codes and MOL2 files for individual lipids.
+
+CG-module : Coarse-grained simulations
+   |
+  (A) simu-water : Lipids are coarse-grained as per the mapping schemes (mapping files kept in AA-module/simu-water/). Coarse-grained 
+                   MARTINI simulations are carried out for individual lipids in bulk MARTINI-3 water. 
+  (B) simu-memb  : Coarse-grained membrane models are simulated using MARTINi-3 force field. The folder contains MDP/GRO/ITP files.
+  (C) simu-memb-large : A larger patch of CG membrane is simulated. The folder contains TPR/GRO/MDP files. The ITP files can be taken
+                        from simu-memb folder.
+
+For Nesterenkonia strain, we have carried out additional simulations described below.
+AA-module/simu-neutralmemb : Atomistic simulation of a neutral membrane of N. lacusekhoensis. The folder contains all necessary files 
+                             to run a simulation.
+AA-module/simu-memb-thymol : Interactions and kinetics of Thymol molecules with charged and neutral membranes of N. lacusekhoensis 
+       |                     are investigated at 0 M and 0.8 M salt concentrations.
+      (A) chargedmemb : The regular membrane with charged lipids and Thymol molecules.
+      (B) chargedmemb-salt : The regular membrane with charged lipids and Thymol molecules at 0.8 M salt.
+      (C) neutralmemb :  The neutral membrane and Thymol molecules.
+      (D) neutralmemb-salt : The neutral membrane and Thymol molecules at 0.8 M salt.
+  
