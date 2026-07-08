@@ -16,9 +16,13 @@ CG-module : Coarse-grained simulations
    |
   (A) simu-water : Lipids are coarse-grained as per the mapping schemes (mapping files kept in AA-module/simu-water/). Coarse-grained 
                    MARTINI simulations are carried out for individual lipids in bulk MARTINI-3 water. 
+
   (B) simu-memb  : Coarse-grained membrane models are simulated using MARTINi-3 force field. The folder contains MDP/GRO/ITP files.
+
   (C) simu-memb-large : A larger patch of CG membrane is simulated. The folder contains TPR/GRO/MDP files. The ITP files can be taken
-                        from simu-memb folder.
+                        from simu-memb folder. The folder also contains Fortran code "structurefactor2D.f" to compute the structure 
+                        factor S(q) data. The python script mypython-averaging.py does average of S(q) data, which are then plotted
+                        using mypython-bendingmodulus.py to get the plot of S(q) vs q and the bending modulus by fits. 
 
 For Nesterenkonia strain, we have carried out additional simulations described below.
 AA-module/simu-neutralmemb : Atomistic simulation of a neutral membrane of N. lacusekhoensis. The folder contains all necessary files 
